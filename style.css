@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+
+/* Global Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    background: url(images/bg-pattern-top-mobile.svg) no-repeat 55px 0,
+                url(images/bg-pattern-bottom-mobile.svg) no-repeat 65px 1027px;
+}
+
+/* Colors */
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Typography */
+
+h1 {
+    font-size: 30px;
+    color: var(--very-dark-magenta);
+}
+  
+h2 {
+    font-size: 14px;
+    color: var(--light-grayish-magenta);
+}
+  
+h3 {
+    font-size: 14px;
+    color: var(--soft-pink);
+    font-weight: 400;
+}
+  
+.intro p {
+    color: var(--dark-grayish-magenta);
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 500;
+}
+  
+.rating-card p {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+  }
+
+.testimonial p {
+    color: var(--light-grayish-magenta);
+    line-height: 30px;
+}
+
+/* Layout */
+
+main {
+    width: 325px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+h1 {
+    width: 80%;
+    margin: 80px auto 30px;
+    text-align: center;
+}
+
+.intro p {
+    margin: 30px 25px 45px;
+    text-align: center;
+}
+
+.rating-cards {
+    margin-bottom: 50px;
+}
+
+.rating-card {
+    height: 75px;
+    background-color: var(--light-grayish-magenta);
+    text-align: center;
+    margin-top: 25px;
+}
+
+.rating-stars {
+    display: inline-block;
+    background: url("images/icon-star.svg");
+    background-repeat: space no-repeat;
+    width: 25%;
+    height: 15px;
+    margin: 12px 0;
+}
+
+.testimonials {
+    margin-bottom: 100px;
+}
+
+.testimonial {
+    height: 247px;
+    padding: 40px 20px 20px 30px;
+    margin-bottom: 16px;
+    background: var(--very-dark-magenta);
+    border-radius: 10px;
+}
+
+.testimonial img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.buyer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial p {
+    margin-top: 27px;
+    width: 95%;
+}
+
+.buyer-name {
+    margin-bottom: 5px;
+}
+
+/* Attribution */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
