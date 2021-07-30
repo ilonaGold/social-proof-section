@@ -11,8 +11,8 @@
 body { 
     font-family: 'Spartan', sans-serif;
     font-size: 15px;
-    background: url(images/bg-pattern-top-mobile.svg) no-repeat 55px 0,
-                url(images/bg-pattern-bottom-mobile.svg) no-repeat 65px 1027px;
+    background: url(images/bg-pattern-top-mobile.svg) no-repeat 0 0,
+                url(images/bg-pattern-bottom-mobile.svg) no-repeat 5px 1027px;
 }
 
 /* Colors */
@@ -57,15 +57,14 @@ h3 {
 
 .testimonial p {
     color: var(--light-grayish-magenta);
-    line-height: 30px;
+    line-height: 22px;
 }
 
 /* Layout */
 
 main {
-    width: 325px;
     height: 100%;
-    margin: 0 auto;
+    margin: 0 25px;
     overflow: hidden;
 }
 
@@ -76,7 +75,7 @@ h1 {
 }
 
 .intro p {
-    margin: 30px 25px 45px;
+    margin: 30px 0 45px;
     text-align: center;
 }
 
@@ -95,7 +94,8 @@ h1 {
     display: inline-block;
     background: url("images/icon-star.svg");
     background-repeat: space no-repeat;
-    width: 25%;
+    max-width: 90px;
+    width: 30%;
     height: 15px;
     margin: 12px 0;
 }
@@ -105,11 +105,11 @@ h1 {
 }
 
 .testimonial {
-    height: 247px;
-    padding: 40px 20px 20px 30px;
+    padding: 40px 35px 30px 30px;
     margin-bottom: 16px;
     background: var(--very-dark-magenta);
     border-radius: 10px;
+    font-size: 12px;
 }
 
 .testimonial img {
@@ -121,7 +121,8 @@ h1 {
 .buyer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-left: 65px;
+    margin-top: -40px;
 }
 
 .testimonial p {
@@ -133,12 +134,144 @@ h1 {
     margin-bottom: 5px;
 }
 
+/* Media queries */
+
+@media (min-width: 411px) {
+    .rating-stars {
+        width: 25%;
+    }
+} 
+
+@media (min-width: 481px) {
+    .rating-stars {
+        width: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+    .rating-stars {
+        width: 20%;
+    }
+    main {
+        margin: 0 100px;
+    }
+    .testimonial p {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background: url(images/bg-pattern-top-desktop.svg) no-repeat,
+        url(images/bg-pattern-bottom-desktop.svg) no-repeat 345px 80px;
+    }
+    main {
+        margin: 0 80px;
+    }
+    .overview {
+        display: flex;
+        justify-content: space-between;
+    }
+    .intro {
+        width: 50%;
+    }
+    .intro h1, .intro p {
+        text-align: left;
+        margin-left: 0;
+    }
+    .rating-cards {
+        width: 25%;
+        margin-right: 10px;
+    }
+    .rating-stars {
+        width: 40%;
+    }
+    .testimonials {
+        display: flex;
+    }
+    .testimonial {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .rating-stars {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        margin: 0 170px 0 160px;
+    }
+    h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+    .intro p {
+        width: 80%;
+        margin-bottom: 75px;
+    }
+    .rating-cards {
+        margin-top: 70px;
+        width: 44%;
+    }
+    .rating-card {
+        width: 440px;
+        height: 55px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .rating-stars {
+        width: 20%;
+        margin-left: -100px;
+    }
+    .rating-card p {
+        margin-top: 5px;
+        font-size: 12px;
+        margin-left: -100px;
+    }
+    .rating-card:first-of-type {
+        margin-left: -50px;
+    }
+    .rating-card:last-of-type {
+        margin-left: 50px;
+    }
+    .testimonial {
+        width: 300px;
+        height: 100%;
+        font-size: 13px;
+        padding-right: 30px;
+        padding-left: 40px;
+    }
+    .testimonial:first-of-type {
+        margin-top: -15px;
+    }
+    .testimonial:last-of-type {
+        margin-top: 15px; 
+    }
+}
+
+@media (min-width: 1920px) {
+    main {
+        margin: 0 280px;
+    }
+    .intro p {
+        font-size: 18px;
+        line-height: 38px;
+    }
+    .testimonial {
+        margin-right: 115px;
+    }
+}
+
 /* Attribution */
 
 .attribution {
     font-size: 11px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .attribution a {
